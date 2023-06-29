@@ -40,3 +40,12 @@ DELETE FROM Address_Book
 WHERE First_Name = 'Pratik';
 
 SELECT * FROM Address_Book;
+
+--UC6: Retrive reocrds With City or state Name
+
+SELECT * FROM Address_Book
+WHERE City = 'Alibag'; 
+
+SELECT * FROM Address_Book
+WHERE State = 'Maharashtra'; 
+
