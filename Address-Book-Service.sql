@@ -38,3 +38,5 @@ WHERE First_Name = 'Pratik';
 
 DELETE FROM Address_Book
 WHERE First_Name = 'Pratik';
+
+SELECT * FROM Address_Book;
