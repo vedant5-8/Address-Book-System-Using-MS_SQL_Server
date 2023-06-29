@@ -56,3 +56,9 @@ WHERE City = 'Alibag';
 
 SELECT COUNT(State) as Total_Contact FROM Address_Book
 WHERE State = 'Maharashtra';
+
+--UC8: retrieve entries sorted alphabetically by Person’s name for a given city
+
+SELECT * FROM Address_Book
+WHERE City = 'Alibag'
+ORDER BY First_Name;
