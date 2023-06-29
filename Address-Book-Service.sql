@@ -33,3 +33,8 @@ INSERT INTO Address_Book VALUES
 UPDATE Address_Book
 SET Address = 'Hashiware', City = 'Alibag', ZipCode = 402209
 WHERE First_Name = 'Pratik';
+
+--UC5: Delete Records
+
+DELETE FROM Address_Book
+WHERE First_Name = 'Pratik';
