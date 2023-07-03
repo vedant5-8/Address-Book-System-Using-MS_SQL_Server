@@ -17,6 +17,8 @@ CREATE TABLE Contact_Details(
 	ZipCode INT
 );
 
+SELECT * FROM Contact_Details;
+
 --UC3: Insert records in Address Book Table
 
 INSERT INTO Address_Book VALUES
@@ -27,3 +29,9 @@ INSERT INTO Address_Book VALUES
 	('Kunal', 'Patil', 7595351505, 'kunal@gmail.com', 'Pimpri', 'Pune', 'Maharashtra', 411017),
 	('Pratik', 'Thakur', 7898456512, 'pratik@gmail.com', 'vimannagar', 'Pune', 'Maharashtra', 411014),
 	('Omkar', 'Pawar', 8623598741, 'op29@gmail.com', 'Seawoods', 'Navi Mumbai', 'Maharashtra', 400706);
+
+--UC4: Update records 
+
+UPDATE Contact_Details
+SET Address = 'Hashiware', City = 'Alibag', ZipCode = 402209
+WHERE First_Name = 'Pratik';
