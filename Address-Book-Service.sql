@@ -40,3 +40,11 @@ WHERE First_Name = 'Pratik';
 
 DELETE FROM Contact_Details
 WHERE First_Name = 'Pratik';
+
+--UC6: Retrive reocrds With City or state Name
+
+SELECT * FROM Contact_Details
+WHERE City = 'Alibag'; 
+
+SELECT * FROM Contact_Details
+WHERE State = 'Maharashtra'; 
