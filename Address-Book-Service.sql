@@ -81,7 +81,7 @@ INSERT INTO Address_Book VALUES
 	('Family', 'Personal'),
 	('Work', 'Professional');
 
---UC10: Count contacts by address book type
+--UC 10: Count contacts by address book type
 
 SELECT COUNT(c.First_Name) 
 FROM Contact_Details c INNER JOIN Address_Book a
@@ -92,3 +92,10 @@ SELECT COUNT(c.First_Name)
 FROM Contact_Details c INNER JOIN Address_Book a
 ON c.AddressBookID = a.AddressBookID
 WHERE a.AddressBookType = 'Professional';
+
+--UC 11: add person to both Friend and Family
+
+INSERT INTO Contact_Details (First_Name, Last_Name, PhoneNo, EmailID, Address, City, State, ZipCode, AddressBookID)
+SELECT 'Prajwal', 'Patil', 8523654125, 'prajwal@gmail.com', 'Ranjankhar', 'Alibag', 'Maharashtra', 402209, AddressBookID
+FROM Address_Book
+WHERE AddressBookName IN ('Friends', 'Family');
