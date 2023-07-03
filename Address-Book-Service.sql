@@ -21,7 +21,7 @@ SELECT * FROM Contact_Details;
 
 --UC3: Insert records in Address Book Table
 
-INSERT INTO Address_Book VALUES
+INSERT INTO Contact_Details VALUES
 	('Sahil', 'Mhatre', 8520025878, 'sahil@gmail.com', 'Chinchwali', 'Alibag', 'Maharashtra', 402209),
 	('Raj', 'Patil', 7539510325, 'rajpatil@gmail.com', 'Ranjankhar', 'Alibag', 'Maharashtra', 402209),
 	('Shubham', 'Patil', 8523697415, 'shubham@gmail.com', 'Hashiware', 'Alibag', 'Maharashtra', 402209),
@@ -62,3 +62,23 @@ WHERE State = 'Maharashtra';
 SELECT * FROM Contact_Details
 WHERE City = 'Alibag'
 ORDER BY First_Name;
+
+--UC9: Create new table Address Books in AddressBookService
+
+CREATE TABLE Address_Book (
+    AddressBookID INT IDENTITY(1,1) PRIMARY KEY,
+    AddressBookName VARCHAR(255),
+    AddressBookType VARCHAR(255)
+);
+
+SELECT * FROM Address_Book;
+
+ALTER TABLE Contact_Details
+ADD AddressBookID INT FOREIGN KEY REFERENCES Address_Book(AddressBookID);
+
+INSERT INTO Address_Book VALUES 
+	('Friends', 'Personal'),
+	('Family', 'Personal'),
+	('Work', 'Professional');
+
+
