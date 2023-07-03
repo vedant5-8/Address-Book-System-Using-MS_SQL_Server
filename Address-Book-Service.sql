@@ -81,4 +81,14 @@ INSERT INTO Address_Book VALUES
 	('Family', 'Personal'),
 	('Work', 'Professional');
 
+--UC10: Count contacts by address book type
 
+SELECT COUNT(c.First_Name) 
+FROM Contact_Details c INNER JOIN Address_Book a
+ON c.AddressBookID = a.AddressBookID
+WHERE a.AddressBookType = 'Personal';
+
+SELECT COUNT(c.First_Name) 
+FROM Contact_Details c INNER JOIN Address_Book a
+ON c.AddressBookID = a.AddressBookID
+WHERE a.AddressBookType = 'Professional';
