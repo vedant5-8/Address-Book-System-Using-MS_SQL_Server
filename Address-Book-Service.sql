@@ -48,3 +48,11 @@ WHERE City = 'Alibag';
 
 SELECT * FROM Contact_Details
 WHERE State = 'Maharashtra'; 
+
+--UC7: Count records by City or State
+
+SELECT COUNT(City) as Total_Contact FROM Contact_Details
+WHERE City = 'Alibag';
+
+SELECT COUNT(State) as Total_Contact FROM Contact_Details
+WHERE State = 'Maharashtra';
